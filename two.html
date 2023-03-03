@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Peel Book</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>PEEL<br>BOOK</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#product" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Product</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>PEEL BOOK</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+ 
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+      <h1 class="w3-jumbo"><b>Peel Book</b></h1>
+      <h1 class="w3-xxxlarge w3-text-red"><b>eco book</b></h1>
+      <hr style="width:50px;border:5px solid rgb(10, 131, 16) class="w3-round">
+    </div>
+    
+    <!-- Photo grid (modal) -->
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="/data:image/jpeg;base64,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" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+        <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+      </div>
+  
+      <div class="w3-half">
+        <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+        <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+        <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+      </div>
+    </div>
+  
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+
+  <!-- Product -->
+  <div class="w3-container" id="product" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Product.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(10, 131, 16)" class="w3-round">
+    
+    <p class="w3-justify">
+        
+        The Peel Book is a book 100% biodegradeble <br>
+        To create this paper, peels go through the hydration process and are then liquefied and processed, creating a paste which is then separated into equal parts and flattened using a rolling pin so that its length and thickness is identical to a normal sheet of paper. The Peel Book is designed so that this process can be carried out twice, in order to extend the life of our 100% ecological notebook.
+        <br>
+
+        The UN objective that we manage is that of "Life on Earth". This consists of preserving the existence of species of flora and fauna in ecosystems. Deforestation is a major problem for the extinction of many of the animals that live here, as they lose their homes, therefore, the food chain is interrupted and does not function properly. 27,000 trees are cut down every day, just for the creation of toilet paper. This gives us an idea of the massive destruction we seek to avoid. With our notebook made from potato peels, we reduce the number of trees that are cut down to make paper, and we also use less water than these companies waste. It helps us preserve habitats, plus it's easy to make at home.
+        <br>
+
+       Did you know that about 17 trees are used to make one ton of paper? We have to take into account that a tree provides oxygen for 3 people to breathe per day, and because of this problem we have decided to make a paper that helps to stop deforestation. "Peel Book" is an innovation to the world of the conventional notebook because its sheets are made 100% of potato peels and it is very easy to make.
+        <br>
+    </p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>FOR YOU</p>
+        <img src="img/305 sin título.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- About us -->
+  <div class="w3-container" id="about" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>About us.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(13, 87, 26)" class="w3-round">
+    <p>The best team in the world.</p>
+    <p>In such an industrialized and polluted world, this proposal fulfills its function and helps the planet by recycling material, providing our customers with an ecological and sustainable proposal as well as environmentally and pocket friendly. And our product "Peel Book" does just that.
+    </p>
+    <p><b>The creators</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>Evaluz Martinez</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Karol Cmacho and Ana Paula Garcia</h3>
+          <p class="w3-opacity">Designer</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Emilio MOrales and Paula Torres</h3>
+          <p class="w3-opacity">Architect</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(10, 131, 16)
+    
+    " class="w3-round">
+    <p>Want more information? Send a Message!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form>  
+  </div>
+
+<!-- map-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.5730161621527!2d-111.00462848565648!3d29.088759882240048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce83c47d54995b%3A0xf25d7bd30e79ef3!2sHighPoint%20International%20School%20Hermosillo!5e0!3m2!1ses-419!2smx!4v1675755446214!5m2!1ses-419!2smx" width="600" height="450" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<!-- End page content -->
+</div>
+
+<!-- FOOTER -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">2023, PEEL BOOK <br> Rights Reserved 
+    
+</p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
